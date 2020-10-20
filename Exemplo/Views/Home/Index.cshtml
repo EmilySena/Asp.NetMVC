@@ -1,0 +1,32 @@
+﻿@model Exemplo.Models.Pessoa
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo</h1>
+</div>
+<form action="Home/Lista" method="POST">
+    <fieldset>
+        <legend>Pessoa</legend>
+        <div>
+            <label for="PessoaId">Código</label>
+        </div>
+        <div>
+            <input type="number" value="@Model.PessoaId" id="PessoaId" name="PessoaId" />
+        </div>
+        <div>
+            <label for="Nome">Nome</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Nome" id="Nome" name="Nome" />
+        </div>
+        <div>
+            <label for="Pais">Pais</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Pais" id="Pais" name="Pais" />
+        </div>
+        <p><input type ="submit" value="Enviar"/></p>
+    </fieldset>
+</form>
